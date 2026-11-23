@@ -1,0 +1,18 @@
+# 行尾统一：仓库内一律 LF，检出时按平台转换
+* text=auto
+
+*.py      text diff=python
+*.md      text
+*.toml    text
+*.json    text
+*.txt     text
+.gitignore text
+.gitattributes text
+
+# 二进制：不要尝试合并或转换
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.zip     binary
+*.3mf     binary
+*.blend   binary

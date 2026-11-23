@@ -1,0 +1,17 @@
+schema_version = "1.0.0"
+
+id = "color_stack_relief"
+version = "1.0.17"
+name = "叠色浮雕工坊"
+tagline = "导入图片，按 CMYW 叠色原理自动建模并导出可打印 3MF / OBJ"
+maintainer = "barry"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+blender_version_max = "5.2.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+tags = ["Mesh", "Import-Export", "3D View"]
+
+# 插件不依赖任何第三方 wheel，纯 bpy + Python 标准库实现

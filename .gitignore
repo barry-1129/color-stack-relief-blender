@@ -1,0 +1,64 @@
+# ============================================================
+# 叠色浮雕工坊 · .gitignore（发布到 GitHub 用）
+# 目标：仓库 < 5 MB —— 个人路径、第三方源码、巨型测试产物一律不入库
+# ============================================================
+
+# ---- 构建 / 打包中间产物（发布包走 GitHub Releases，不入库）----
+dist/
+*.zip
+_pkg.txt
+
+# ---- 测试产物（tests/out 曾达 2.2 GB，单个 3MF 解包 331 MB，
+#      远超 GitHub 100 MB 硬限；脚本本身要入库，产物不要）----
+tests/out/
+tests/out_*/
+
+# ---- 历史标定实验（91 个文件，含 out/ 调试产物；现行链路已迁到 calib/）----
+tests/calib/
+
+# ---- 本机私有配置与素材（含用户名路径 / 实拍照片 / 第三方工程文件）----
+tests/_paths_local.py
+tests/photos/*
+!tests/photos/README.md
+tests/ref/*
+!tests/ref/README.md
+
+# ---- 第三方 / 逆向参考（无许可证或 AGPL，混进 GPL 仓库有许可风险）----
+_lumina/
+node_modules/
+_*.cpp
+_*.hpp
+_*.h
+_*.txt
+_*.json
+ANALYSIS-*.md
+PLAN-*.md
+CODE-REVIEW-*.md
+result.json
+
+# ---- 散落素材：图片默认不入库，只放行 docs/images（README 用图）----
+*.png
+*.jpg
+*.jpeg
+!docs/images/*.png
+!docs/images/*.jpg
+*.gcode
+
+# 打包用的历史版本 zip 与对照图（桌面那份是交付物，仓库里只要源码）
+叠色浮雕工坊_v*.zip
+
+# ---- 工作区元数据（含个人路径与开发记录，绝不可入库）----
+.workbuddy/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pdb
+*.log
+
+# ---- 内部交付/评审文档（含内部测试细节，不随代码公开）----
+交付说明_*.md
+代码审查报告_*.md
+审核报告_*.md
+blender.crash.txt
+*.crash.txt
