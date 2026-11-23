@@ -62,3 +62,10 @@ __pycache__/
 审核报告_*.md
 blender.crash.txt
 *.crash.txt
+
+# ---- 本地开发资产，不随源码发布（2026-11-23 起）----
+/tests/
+/calib/
+/tools/
+/previews/
+/.github/
